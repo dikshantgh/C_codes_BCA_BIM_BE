@@ -212,6 +212,53 @@ int main() {
 }
     
     
+
+
+//sum of all the elements of 3D array and display the 3D array 
+#include <stdio.h>
+
+int main() {
+    int sum=0;
+    int a[2][3][3]={
+        {{1,12,3},
+        {1,22,3},
+        {1,23,3}},
+        
+        {{1,25,3},
+        {1,26,3},
+        {1,27,3}}
+    };
     
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            for(int k=0;k<3;k++)
+            {
+                printf("%d\t",a[i][j][k]);
+            }
+            printf("\n");
+        }
+        printf("\n");
+    
+    }
+    
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            for(int k=0;k<3;k++)
+            {
+                sum = sum+a[i][j][k];
+            }
+        }
+    }
+    printf("\nthe sum of all the elements is %d", sum);
+    
+        return 0;
+}
+
+
+
 
 
