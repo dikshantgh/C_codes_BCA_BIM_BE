@@ -314,3 +314,65 @@ int main() {
 }
 
 
+//2D array matrix multiply
+#include <stdio.h>
+
+int main() {
+    
+    int a[2][3]={
+        {10,12,3},
+        {10,22,3}
+    };
+    
+     int b[3][3]={
+        {10,12,3},
+        {10,22,3},
+        {10,23,3}
+    };
+    int c[2][3];
+    puts("displaying first matrix");
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+                printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+    
+     puts("displaying second matrix");
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+                printf("%d\t",b[i][j]);
+        }
+        printf("\n");
+    }
+    
+    //multiply
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+            c[i][j]=0;
+            for (int k = 0; k < 3; ++k) {
+                c[i][j] += a[i][k] * b[k][j];
+         }
+        }
+    }
+    
+    puts("displaying matrix multiplying");
+    for(int i=0;i<2;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+                printf("%d\t",c[i][j]);
+        }
+        printf("\n");
+    }
+   
+        return 0;
+}
+
+
