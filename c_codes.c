@@ -260,5 +260,57 @@ int main() {
 
 
 
+//Q. WAP in c to read 3*3 square matrix , find the minimum //elements, and replace the diagonal by minimum elements and //display it 
+
+#include <stdio.h>
+
+int main() {
+    
+    int a[3][3]={
+        {10,12,3},
+        {10,22,3},
+        {10,23,3},
+    };
+    int min=a[0][0];
+    puts("displaying matrix");
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+                printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+    
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+                if(a[i][j]<min)
+                {
+                    min=a[i][j];
+                }
+        }
+    }
+    
+    
+     for(int i=0;i<3;i++)
+    {
+                a[i][i]=min;
+                a[i][3-i-1]=min;
+    }
+    
+    puts("displaying matrix after replacing diagonal with min");
+    for(int i=0;i<3;i++)
+    {
+        for(int j=0;j<3;j++)
+        {
+                printf("%d\t",a[i][j]);
+        }
+        printf("\n");
+    }
+   
+        return 0;
+}
 
 
