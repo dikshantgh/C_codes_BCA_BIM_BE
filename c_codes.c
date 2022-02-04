@@ -385,14 +385,13 @@ struct Distance
     int feet;
 }d[2],result;
 
-
 int main() {
     for(int i=0;i<2;i++)
     {
         printf("Enter the details for distance_%d as follows\n",i);
        
         puts("Enter the feet:");
-        scanf("%d",&d[i].feet);
+        scanf("%d",&d[i].feet); 
         puts("Enter the inch:");
         scanf("%f",&d[i].inch);
     }
@@ -404,24 +403,22 @@ int main() {
         printf("inch: %.2f\nfeet: %d\n",d[i].inch,d[i].feet);
     }
     
-    int j=0;
+    result.inch=0;
+    result.feet=0;
     for(int i=0;i<2;i++)
     {
-        result.inch = d[i].inch + d[j].inch; 
-        result.feet = d[i].feet + d[j].feet;
-        j++;
+        result.inch = result.inch + d[i].inch; 
+        result.feet = result.feet + d[i].feet;
     }
+    
+    
     while(result.inch>=12)
     {
         result.inch = result.inch-12;
         result.feet++;
     }
     
-    printf("\nThe sum of both the distance is %d feet and %.2f inches",result.inch, result.feet);
+    printf("\nThe sum of both the distance is %d feet and %.2f inches",result.feet, result.inch);
     
     return 0;
 }
-
-
-
-
