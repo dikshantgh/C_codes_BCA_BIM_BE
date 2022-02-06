@@ -507,3 +507,62 @@ int main() {
  
     return 0;
 }
+
+
+
+
+
+
+// WAP in C to tranpose a 2D matrix and store and display
+
+#include <stdio.h>
+#define ROW 3
+#define COL 2
+int main() {
+    int a[ROW][COL];
+    int transpose[COL][ROW];
+    printf("Enter the elements for first matrix of size %d X %d matrix \n",ROW,COL);
+    for(int i=0;i<ROW;i++)
+    {
+        for(int j=0;j<COL;j++)
+        {
+            printf("\na[%d][%d]:",i,j);
+            scanf("%d", &a[i][j]);
+        }
+    }
+    
+ //displaying matrix
+  printf("Displaying the given matrix:\n");
+    for(int i=0;i<ROW;i++)
+    {
+        for(int j=0;j<COL;j++)
+        {
+            printf("%d\t", a[i][j]);
+            
+        }
+        printf("\n");
+    }
+ 
+ //transpose
+    for(int i=0;i<ROW;i++)
+    {
+        for(int j=0;j<COL;j++)
+        {
+            transpose[j][i] = a[i][j];
+        }
+    }
+    
+    //display transpose matrix
+     printf("Displaying the transposed matrix:\n");
+    for(int i=0;i<COL;i++)
+    {
+        for(int j=0;j<ROW;j++)
+        {
+            printf("%d\t", transpose[i][j]);
+            
+        }
+        printf("\n");
+    }
+ 
+    return 0;
+}
