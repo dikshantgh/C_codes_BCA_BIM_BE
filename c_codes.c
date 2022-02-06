@@ -422,3 +422,35 @@ int main() {
     
     return 0;
 }
+
+
+//WAP in C to display the following pattern
+/*
+
+a	
+b	b	
+c	c	c	
+e	e	e	e
+
+*/
+
+#include <stdio.h>
+
+int main() {
+  for(int i=0;i<4;i++)
+  {
+      for(int j=0;j<=i;j++)
+      {
+          if(i==3)
+            printf("%c\t",'a'+i+1);
+          else
+            printf("%c\t",'a'+i);
+      }
+      printf("\n");
+  }
+    return 0;
+}
+
+
+
+//
