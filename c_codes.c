@@ -46,12 +46,8 @@ int main()
 
 // Multidimensional Array
 
-// add two 2D array
-// sum of all the elements of two 3D array
-//2D array multiplication
-//2D matrix diagonal elements sum
-//sum of all the elements of 2D array(2D matrix)
-//sum of all the elements of two 2D matrix
+
+//sum of all the elements of 2D matrix
 #include <stdio.h>
 
 int main() {
@@ -94,7 +90,6 @@ int main() {
     return 0;
 }
 
-// adding two 2D array
 
 
 // Primary and secondary diagonal sum in 2D array
@@ -453,4 +448,62 @@ int main() {
 
 
 
-//
+//Add two 2D matrix
+/*
+a	
+b	b	
+c	c	c	
+e	e	e	e
+*/
+// Online C compiler to run C program online
+#include <stdio.h>
+#define ROW 3
+#define COL 2
+int main() {
+    int a[ROW][COL];
+    int b[ROW][COL];
+    int sum[ROW][COL];
+    printf("Enter the elements for first matrix of size %d X %d matrix \n",ROW,COL);
+    for(int i=0;i<ROW;i++)
+    {
+        for(int j=0;j<COL;j++)
+        {
+            printf("\na[%d][%d]:",i,j);
+            scanf("%d", &a[i][j]);
+        }
+    }
+    
+     printf("\nEnter the elements for second matrix of size %d X %d matrix \n",ROW,COL);
+    for(int i=0;i<ROW;i++)
+    {
+        for(int j=0;j<COL;j++)
+        {
+            printf("\nb[%d][%d]:",i,j);
+            scanf("%d", &b[i][j]);
+        }
+    }
+ 
+ //sum
+ 
+    for(int i=0;i<ROW;i++)
+    {
+        for(int j=0;j<COL;j++)
+        {
+            sum[i][j] = a[i][j] +  b[i][j];
+        }
+    }
+    
+    //display
+     printf("Displaying the sum:\n");
+    for(int i=0;i<ROW;i++)
+    {
+        for(int j=0;j<COL;j++)
+        {
+            printf("%d\t", sum[i][j]);
+            
+        }
+        printf("\n");
+    }
+ 
+    return 0;
+}
