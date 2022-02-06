@@ -559,3 +559,60 @@ int main() {
  
     return 0;
 }
+
+
+
+//wap in C to print the following pattern
+/*
+
+N
+N e
+N e p
+N e p a
+N e p a L
+
+*/
+
+#include <stdio.h>
+ int main()
+ {
+    char name[6]="Nepal";
+    for(int k=1;k<=5;k++)
+    {
+            printf("%.*s", k,name); // k is number of characters to print and name is the source of character
+            printf("\n");
+    }
+   
+    return 0;
+}
+
+
+
+
+//WAp in C to print the following pattern
+/*
+
+N
+e e
+P P P
+a a a a
+L L L L L
+
+*/
+#include <stdio.h>
+ int main()
+ {
+    char name[6]="NePaL";
+    for(int k=0;k<5;k++)
+    {
+        for(int j=0;j<=k;j++)
+            printf("%c\t",name[k]);
+            printf("\n");
+    }
+   
+    return 0;
+}
+
+
+
+
