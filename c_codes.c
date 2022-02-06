@@ -449,13 +449,6 @@ int main() {
 
 
 //Add two 2D matrix
-/*
-a	
-b	b	
-c	c	c	
-e	e	e	e
-*/
-// Online C compiler to run C program online
 #include <stdio.h>
 #define ROW 3
 #define COL 2
