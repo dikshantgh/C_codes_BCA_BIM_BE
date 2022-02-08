@@ -650,13 +650,13 @@ CProgramming
 int main() {
     char name[30]="CProgramming";
 
-     for(int i=0;i<12;i++)
+     for(int i=0;name[i]!='\0';i++)
     {
         printf("%.*s",12-i,name);
         printf("\n");
     }
 
-    for(int i=1;i<12;i++)
+    for(int i=1;name[i]!='\0';i++)
     {
         printf("%.*s",i+1,name);
         printf("\n");
