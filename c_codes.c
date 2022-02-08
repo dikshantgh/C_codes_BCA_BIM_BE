@@ -615,4 +615,52 @@ L L L L L
 
 
 
+//wap in c to display the following pattern
+/*
 
+CProgramming
+CProgrammin
+CProgrammi
+CProgramm
+CProgram
+CProgra
+CProgr
+CProg
+CPro
+CPr
+CP
+C
+CP
+CPr
+CPro
+CProg
+CProgr
+CProgra
+CProgram
+CProgramm
+CProgrammi
+CProgrammin
+CProgramming
+
+*/
+
+
+#include <stdio.h>
+
+int main() {
+    char name[30]="CProgramming";
+
+     for(int i=0;i<12;i++)
+    {
+        printf("%.*s",12-i,name);
+        printf("\n");
+    }
+
+    for(int i=1;i<12;i++)
+    {
+        printf("%.*s",i+1,name);
+        printf("\n");
+    }
+
+    return 0;
+}
