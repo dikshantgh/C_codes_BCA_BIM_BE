@@ -664,3 +664,30 @@ int main() {
 
     return 0;
 }
+
+
+
+
+    
+/*WAP in C to check how many words starts from letter ‘d’ in the given list of words
+{“apple”, “damp”, “dikshant”,”deerwalk”,”odour”,”should”}
+*/
+
+
+#include <stdio.h>
+
+int main() {
+    char string[6][10]={
+      "apple", "damp", "dikshant","deerwalk","odour","should" 
+    };
+    int count=0;
+    for(int i=0; i<6;i++)
+    {
+            if(string[i][0]=='d')
+                count++;
+    }
+    
+    printf("The total word which starts with 'd' : %d",count);
+    return 0;
+}
+
