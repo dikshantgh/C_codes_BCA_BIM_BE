@@ -1,7 +1,7 @@
 
 
 //it can also be done using sort then printf("%d", array[1])
-//second largest
+//second largest from an array
 #include<stdio.h>
 #include<limits.h>
  
@@ -776,5 +776,48 @@ int main() {
             printf("%d\n", i);
         
     }
+    return 0;
+}
+
+
+//second largest among three numbers
+
+#include <stdio.h>
+int main() {
+    
+    int a,b,c;
+    a=10,b=1,c=11;
+    
+    // a>b>c
+    // a>c>b
+    
+    // b>a>c
+    // b>c>a
+    
+    // c>a>b
+    // c>b>a
+    
+    if(a>=b && a>=c)
+    {
+        if(b>=c)
+            printf("%d", b);
+        else
+            printf("%d", c);
+    }
+    else if(b>=a && b>=c)
+    {
+        if(a>=c)
+           printf("%d", a);
+        else
+            printf("%d", c);
+    }
+    else 
+    {
+        if(a>=b)
+            printf("%d", a);
+        else
+            printf("%d", b);
+    }
+   
     return 0;
 }
