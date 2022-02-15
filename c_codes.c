@@ -1,5 +1,4 @@
 
-// One Dimensional Array
 
 //it can also be done using sort then printf("%d", array[1])
 //second largest
@@ -691,3 +690,27 @@ int main() {
     return 0;
 }
 
+
+//prime or not
+
+#include <stdio.h>
+
+int main() {
+    int n;
+    puts("Enter a number");
+    scanf("%d", &n);
+    int flag=1;
+    for(int i=2;i<=n/2;i++)
+    {
+        if(n%i==0)
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag && n>1)
+        puts("Prime");
+    else
+        puts("Not prime");
+    return 0;
+}
