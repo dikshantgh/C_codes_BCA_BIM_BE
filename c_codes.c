@@ -691,14 +691,17 @@ int main() {
 }
 
 
-//prime or not
+//prime or not prime check
 
 #include <stdio.h>
-
 int main() {
     int n;
-    puts("Enter a number");
-    scanf("%d", &n);
+    do{
+        puts("Enter a non-negative number to check");
+        scanf("%d", &n);
+    }
+    while(n<0);
+    
     int flag=1;
     for(int i=2;i<=n/2;i++)
     {
@@ -709,8 +712,69 @@ int main() {
         }
     }
     if(flag && n>1)
-        puts("Prime");
-    else
+        puts("Prime Number");
+    else 
         puts("Not prime");
+    return 0;
+}
+
+
+//prime or composite check
+
+#include <stdio.h>
+int main() {
+    int n;
+    do{
+        puts("Enter a non-negative number to check");
+        scanf("%d", &n);
+    }
+    while(n<0);
+    
+    int flag=1;
+    for(int i=2;i<=n/2;i++)
+    {
+        if(n%i==0)
+        {
+            flag=0;
+            break;
+        }
+    }
+    if(flag && n>1)
+        puts("Prime Number");
+    else if (n<2) 
+        puts("Neither Composite nor Prime Number");
+    else
+        puts("Composite NUmber");
+    return 0;
+}
+
+
+
+//print all prime numbers for a given range of two number
+#include <stdio.h>
+int main() {
+    int n1,n2;
+    do{
+        puts("Enter two numbers greater than 1");
+        scanf("%d%d", &n1,&n2);
+    }
+    while(n1<2 || n2<2);
+    
+    int flag;
+    for(int i=n1;i<=n2;i++)
+    {
+        flag=1;
+        for(int j=2;j<=i/2;j++)
+        {
+            if(i%j==0)
+            {
+                flag=0;
+                break;
+            }
+        }
+        if(flag)
+            printf("%d\n", i);
+        
+    }
     return 0;
 }
