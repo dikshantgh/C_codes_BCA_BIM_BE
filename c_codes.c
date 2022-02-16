@@ -821,3 +821,23 @@ int main() {
    
     return 0;
 }
+
+
+
+// fibonacci series till nth term
+#include <stdio.h>
+int main() {
+    int number;
+    puts("Enter the nth positive term");
+    scanf("%d", &number);
+    int a=0, b=1,c=0;
+    for(int i=1;i<=number;i++)
+    {   
+        printf("\t%d", c);
+        c=a+b;
+        a=b;
+        b=c;
+    }
+    
+    return 0;
+}
