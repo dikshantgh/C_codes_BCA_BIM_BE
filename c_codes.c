@@ -821,3 +821,21 @@ int main() {
 
 
 
+
+
+//geometric series sum of nth term
+#include <stdio.h>
+#include<math.h>
+int main() {
+   int nth_term;
+   float sum=0;
+   scanf("%d", &nth_term);
+   int a=4,r=2;
+   for(int i=0;i<nth_term;i++)
+   {
+       sum = sum + (a*pow(r,i));
+   }
+    
+    printf("the sum of geometric series till %d term is %.2f", nth_term,sum);
+    return 0;
+}
