@@ -839,3 +839,21 @@ int main() {
     printf("the sum of geometric series till %d term is %.2f", nth_term,sum);
     return 0;
 }
+
+
+
+
+
+//find the square of a positive number without using pow
+#include <stdio.h>
+#include<math.h>
+int main() {
+  int base, exponent,result=1;
+  base = 2, exponent =5;
+   for(int i=1;i<=exponent;i++)
+   {
+       result = result * base; 
+   }
+    printf("the square is %d", result);
+    return 0;
+}
