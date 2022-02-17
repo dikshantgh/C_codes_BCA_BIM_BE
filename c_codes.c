@@ -799,3 +799,25 @@ int main() {
     
     return 0;
 }
+
+
+//sum of nth term harmonic series
+
+#include <stdio.h>
+
+int main() {
+   int nth_term;
+   float sum=0;
+   scanf("%d", &nth_term);
+   
+   for(int i=1;i<=nth_term;i++)
+   {
+       sum = sum + (1/(float)i);
+   }
+    
+    printf("the sum of harmonic series till %d term is %.2f", nth_term,sum);
+    return 0;
+}
+
+
+
