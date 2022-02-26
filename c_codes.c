@@ -857,3 +857,28 @@ int main() {
     printf("the square is %d", result);
     return 0;
 }
+
+
+
+
+// return sum, subtraction and multiplication from one function 
+#include <stdio.h>
+
+void result(int *a1, int *b1, int *sum1, int *mul1, int *sub1)
+{
+    *sum1 = *a1 + *b1;
+    *mul1 = *a1 * *b1;
+    *sub1 = *a1 - *b1;
+    
+}
+
+int main() {
+    
+    int a,b,sum,mul,sub;
+    puts("ENter two numbers");
+    scanf("%d%d", &a, &b);
+    
+    result(&a,&b,&sum,&mul,&sub);
+    printf("The sum is %d\nthe sub is %d\nthe mul is %d",sum,sub,mul);
+    return 0;
+}
