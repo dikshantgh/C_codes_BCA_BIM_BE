@@ -922,3 +922,17 @@ int main() {
         }
     return 0;
 }
+
+
+
+
+//typedef example in C
+#include <stdio.h>
+typedef int scale;
+
+int main() {
+    scale length, breadth;
+    length=2,breadth=3;
+    printf("\nThe area of rectangle for length %d and breadth %d is %d", length, breadth, length*breadth);
+    return 0;
+}
