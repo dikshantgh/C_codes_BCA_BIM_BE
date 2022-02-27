@@ -882,3 +882,43 @@ int main() {
     printf("The sum is %d\nthe sub is %d\nthe mul is %d",sum,sub,mul);
     return 0;
 }
+
+
+
+
+
+//to find the second largest among three number
+#include <stdio.h>
+
+int main() {
+   
+  int a=7,b=7,c=6;
+  
+  do{
+      printf("Enter three distinct number");
+      scanf("%d%d%d", &a,&b,&c);
+  }while(a==b || a==c|| b==c);
+  
+  if(a>b && a>c)
+  {
+      if(b>c)
+        printf("%d",b);
+    else
+        printf("%d",c);
+  }
+  else if(b>c)
+    {
+        if(a>c)
+            printf("%d",a);
+        else
+            printf("%d",c);
+    }
+  else
+        {
+            if(b>a)
+                printf("%d",b);
+            else
+                printf("%d",a);
+        }
+    return 0;
+}
