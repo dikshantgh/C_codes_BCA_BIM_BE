@@ -1,7 +1,7 @@
 
 
+//WAP in C to find the second largest from an array
 //it can also be done using sort then printf("%d", array[1])
-//second largest from an array
 #include<stdio.h>
 #include<limits.h>
  
@@ -936,3 +936,24 @@ int main() {
     printf("\nThe area of rectangle for length %d and breadth %d is %d", length, breadth, length*breadth);
     return 0;
 }
+
+
+
+//wap in c to take 3 student names and reverse only the second second name without using strrev() function
+#include <stdio.h>
+#include<string.h>
+int main() {
+    char name[3][40];
+    for(int i=0;i<3;i++)
+    {
+        puts("ENter the name\n");
+        fgets(name[i],40,stdin);
+    }
+    int len = strlen(name[1]);
+    for(int i=len-1;i>=0;i--)
+    {
+        printf("%c", name[1][i]);
+    }
+    return 0;
+}
+
