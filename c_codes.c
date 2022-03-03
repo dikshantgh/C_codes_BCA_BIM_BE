@@ -792,9 +792,9 @@ int main() {
     for(int i=1;i<=number;i++)
     {   
         printf("\t%d", c);
-        c=a+b;
         a=b;
         b=c;
+        c=a+b;
     }
     
     return 0;
