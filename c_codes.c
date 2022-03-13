@@ -957,3 +957,32 @@ int main() {
     return 0;
 }
 
+
+//arranging the given words in ascending order
+#include <stdio.h>
+#include<string.h>
+int main() {
+    // Write C code here
+    // printf("Hello world");
+    char words[5][10]={"ball","apple","zebra","someone","knife"};
+    char w[10];
+    for(int i=0;i<5;i++)
+    {
+        for(int j=i+1;j<5;j++){
+            if((strcmp(words[i],words[j]))>0)
+            {
+               strcpy(w,words[i]);
+               strcpy(words[i],words[j]);
+               strcpy(words[j],w);
+            }
+        }
+    }
+
+    for(int i=0;i<5;i++)
+        printf("%s\n", words[i]);
+    return 0;
+}
+
+
+
+
