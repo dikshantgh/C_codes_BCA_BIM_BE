@@ -984,5 +984,39 @@ int main() {
 }
 
 
+//Conver the given days into days, month and year
+#include<stdio.h>
+int main()
+{
+int ndays,year,month,day;
 
+printf("Enter day\n");
+scanf("%d",&ndays);
+
+year=ndays/365;
+month=(ndays%365)/30;
+day=(ndays%365)%30;
+
+printf("year=%d\nmonth=%d\nday=%d",year,month,day);
+return 0;
+}
+
+
+
+//convert the given seconds into seconds, minutes and hour
+#include<stdio.h>
+int main()
+{
+int seconds,hours,minutes,input;
+printf("Enter no of seconds\n");
+scanf("%d",&input);
+
+hours=input/3600;
+minutes=(input%3600)/60;
+seconds=(input%3600)%60;
+
+printf("hours=%d\n",hours);
+printf("minutes=%d\n",minutes);
+printf("seconds=%d\n",seconds);
+}
 
